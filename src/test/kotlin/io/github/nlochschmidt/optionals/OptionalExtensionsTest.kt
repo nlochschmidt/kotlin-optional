@@ -75,6 +75,16 @@ class OptionalExtensionsTest {
     }
 
     @Test
+    fun `contains`() {
+        assertThat(emptyOpt.contains(""), equalTo(false))
+        assertThat(emptyOpt.contains(null), equalTo(false))
+
+        val exampleString = Optional.of("Test")
+        assertThat(exampleString.contains("Te"), equalTo(false))
+        assertThat(exampleString.contains("Test"), equalTo(true))
+    }
+
+    @Test
     fun `orElse`() {
         assertThat(emptyOpt orElse emptyOpt, equalTo(emptyOpt))
 
@@ -88,5 +98,3 @@ class OptionalExtensionsTest {
         assertThat(exampleStringOpt orElse exampleIntOpt, equalTo(exampleStringOpt as Optional<Any>))
     }
 }
-
-
