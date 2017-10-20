@@ -1,0 +1,27 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+target
+.classpath
+.project
+.settings
+dependency-reduced-pom.xml
+bin
+out
+
+# OSX
+*.DS_Store
+
+# IntelliJ IDE Project Files #
+*.iml
+*.idea
+*.versionsBackup
+pom.xml.versionsBackup
+jacoco.exec
+
+# Gradle #
+.gradle
+/build/
